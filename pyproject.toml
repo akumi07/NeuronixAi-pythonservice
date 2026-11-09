@@ -1,0 +1,25 @@
+[project]
+name = "ai-service"
+version = "0.1.0"
+description = "NeuronixAI Python AI service (FastAPI + LangGraph)"
+readme = "README.md"
+authors = [
+    { name = "Akash Mishra", email = "akash9338144396@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.162.2",
+    "langgraph>=1.2.20",
+    "uvicorn>=0.54.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[dependency-groups]
+dev = [
+    "httpx>=0.28.1",
+    "pytest>=9.2.0",
+    "ruff>=0.17.4",
+]
